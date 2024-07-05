@@ -1,11 +1,14 @@
 {
   "name": "bandhu",
   "version": "1.0.0",
+  "homepage": "https://gitname.github.io/bandhu",
   "description": "Web interface for gemini_AI Chatbot",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "npx parcel ./public/index.html",
+    "build": "npx parcel build ./public/index.html",
+    "deploy":"gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -23,6 +26,7 @@
     "buffer": "^6.0.3",
     "crypto-browserify": "^3.12.0",
     "events": "^3.3.0",
+    "gh-pages": "^6.1.1",
     "os-browserify": "^0.3.0",
     "path-browserify": "^1.0.1",
     "process": "^0.11.10",
