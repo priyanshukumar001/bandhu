@@ -34590,7 +34590,7 @@ const VerifyContext = /*#__PURE__*/ (0, _react.createContext)();
 //create a provider component
 const Authorization = ({ children })=>{
     _s();
-    const [isVerified, setIsVerified] = (0, _react.useState)(false);
+    const [isVerified, setIsVerified] = (0, _react.useState)(true);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(VerifyContext.Provider, {
         value: [
             isVerified,
@@ -34603,7 +34603,7 @@ const Authorization = ({ children })=>{
         columnNumber: 9
     }, undefined);
 };
-_s(Authorization, "2C7pNd1FuWz8xViaqz/CMtUnXAE=");
+_s(Authorization, "/ju4vj/Go3lnxT1H/N7rtO4r2uU=");
 _c = Authorization;
 //custom hook to use the GlobalContext
 const useVerify = ()=>{
@@ -74444,7 +74444,7 @@ var _generativeAi = require("@google/generative-ai");
 (0, _dotenvDefault.default).config();
 const newAPIKey = localStorage.getItem("newAPIKey");
 console.log(newAPIKey);
-const genAI = new (0, _generativeAi.GoogleGenerativeAI)(newAPIKey !== "" ? newAPIKey : "AIzaSyBog4Bz88wgKl0HexlJI5QmO2elG4o6-j4");
+const genAI = new (0, _generativeAi.GoogleGenerativeAI)(newAPIKey && typeof newAPIKey === "string" && newAPIKey.trim() !== "" ? newAPIKey : "AIzaSyBog4Bz88wgKl0HexlJI5QmO2elG4o6-j4");
 const model = genAI.getGenerativeModel({
     model: "gemini-pro"
 });
