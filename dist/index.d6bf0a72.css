@@ -1,0 +1,36 @@
+.container {
+  max-width: 300px;
+  margin: 2em auto;
+}
+
+form {
+  flex-direction: column;
+  display: flex;
+}
+
+input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+input:hover {
+  box-shadow: 0 0 5px 2px #ccc;
+}
+
+input[type="submit"] {
+  color: #fff;
+  cursor: pointer;
+  background-color: #007bff;
+  border: none;
+  border-radius: 1.6em;
+  padding: .8em;
+  font-weight: bolder;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+/*# sourceMappingURL=index.d6bf0a72.css.map */

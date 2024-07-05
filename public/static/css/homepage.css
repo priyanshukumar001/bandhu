@@ -1,0 +1,145 @@
+#animationBody {
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(to right, rgb(8, 179, 253), rgb(3, 21, 191));
+    margin: 0px;
+    padding: 1em;
+    z-index: 0;
+    position: relative;
+    overflow: hidden;
+    position: relative;
+    transition: transform linear 1s;
+
+    /* box-shadow: -10px 0px 15px 20px rgb(3, 21, 191); */
+    /* filter: drop-shadow(100%) blur(10%); */
+    /* z-index: -20; */
+}
+
+.animated2 {
+    width: 100em;
+    height: 100em;
+    z-index: -1;
+    background: radial-gradient(ellipse at top, #6fcafe, #17bbf7 110%);
+    opacity: 0.5;
+    animation: moveLeft 10s infinite;
+    /* border-radius: 70% 45% 60% 30%; */
+    border-radius: 80%;
+    position: absolute;
+    filter: blur(4rem);
+}
+
+.animated3 {
+    animation: moveRight 10s infinite;
+}
+
+@keyframes moveLeft {
+    100% {
+        transform: translateX(100%) translateY(0%) rotate(0deg);
+    }
+
+    0% {
+        transform: translateX(-110%) translateY(-30%) rotate(360deg);
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(20%) translateY(0%) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(-110%) translateY(-30%) rotate(360deg);
+    }
+}
+
+
+#welcome {
+    font-size: 4em;
+    font-family: "Great Vibes", cursive;
+    font-style: normal;
+    text-align: center;
+}
+
+.haveApi {
+    width: fit-content;
+    margin: 2em auto;
+    /* border: 1px solid black; */
+    display: flexbox;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+}
+
+.keyButton {
+    display: block;
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+
+    font-size: 1em;
+    color: whitesmoke;
+    margin: 1em auto;
+    padding: 1em;
+
+    /* border: 1px solid black; */
+    border-radius: 1em;
+    background: linear-gradient(to right, rgba(32, 146, 252, 0.5), rgba(3, 29, 227, 0.8));
+    transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.keyButton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    border: none;
+    /* border: 1px solid black; */
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    transition: transform 1s ease;
+}
+
+.keyButton:hover::before {
+    transform: translateX(100%);
+}
+
+#keyInputContainer {
+    display: none;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 0.8em;
+    /* border: 1px solid black; */
+}
+
+#keyInput {
+    all: unset;
+    width: 85%;
+    margin: 0px;
+    background-color: white;
+    border-radius: 0.8em 0px 0px 0.8em;
+}
+
+#markOk {
+    display: inline-block;
+    color: #051bc3;
+    background-color: white;
+    width: 15%;
+    margin: 0px;
+    border: none;
+    border-radius: 0px 0.8em 0.8em 0px;
+    outline: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    /* vertical-align: middle; */
+}
+
+@media screen and (min-width:600) {
+    .haveApi {
+        width: 40vw;
+        max-width: 400px;
+    }
+}

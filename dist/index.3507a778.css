@@ -1,0 +1,47 @@
+.dropButton {
+  text-align: center;
+  vertical-align: middle;
+  background-color: #eee;
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  margin: auto .4em;
+  padding: auto;
+  font-size: 1.5em;
+  line-height: 1em;
+  display: inline-block;
+}
+
+.dropButton:hover {
+  box-shadow: 0 0 5px #fff;
+}
+
+.dropBox {
+  z-index: 11;
+  text-align: center;
+  background-color: #eee;
+  border-radius: .5em;
+  flex-flow: wrap;
+  width: fit-content;
+  transition: width .5s ease-in-out, padding 1s cubic-bezier(.075, .82, .265, 1);
+  position: absolute;
+  right: 1em;
+}
+
+.dropOptions {
+  text-align: center;
+  color: #0d6ef5;
+  background-color: #fff;
+  border-bottom: 1px solid #a5a4a4;
+  width: 100%;
+  padding: .5em;
+  font-size: large;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.dropOptions:hover {
+  background-color: #cae4fb;
+  box-shadow: 0 0 5px #fff;
+}
+/*# sourceMappingURL=index.3507a778.css.map */

@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+}
+
+h2 {
+    text-align: center;
+}
+
+#chat {
+    width: 50px;
+    height: 50px;
+    /* padding: 0.1rem; */
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    background-color: rgb(18, 116, 255);
+    display: flex;
+    position: fixed;
+    right: 2em;
+    bottom: 2em;
+}
+
+#chat > p {
+    margin: auto;
+    color: white;
+}
+
+#login_error,
+#sign_error {
+    color: red;
+    font-weight: bolder;
+    margin: 1em auto;
+}
+
+a {
+    color: rgb(13, 110, 245);
+    text-decoration: none;
+}
+
+/*for medium size screen*/
+@media screen and (max-width:650px) {
+    .chat-container {
+        width: 90%;
+        margin: 1em auto;
+        height: 80vh;
+    }
+
+    #search {
+        display: block;
+        width: 70%;
+        margin: 0.2em auto;
+        padding: 0.2em 0.5em;
+        /* height: 1em; */
+        font-size: 0.8em;
+    }
+
+
+    .profile {
+        margin: 0.5em 0em 0em auto;
+        /* border: 1px solid black; */
+        /* margin-bottom: 0px; */
+    }
+}
+
+/*for small size screen*/
+@media screen and (max-width: 400px) {
+    .container {
+        padding: 0.5em;
+        padding-top: 0;
+    }
+
+    .chat-container {
+        width: 100%;
+        /* min-width: none; */
+        margin: 0.5em auto;
+        height: 78vh;
+
+    }
+
+    .bot-message {
+        border-radius: 1em;
+    }
+
+    .register {
+        margin: 0.1rem auto;
+        margin-bottom: 0;
+    }
+
+    #logo {
+        margin: auto;
+        /* float: left; */
+        position: absolute;
+        bottom: 2cqh;
+    }
+
+    #search {
+        width: 100%;
+    }
+
+}
+
+/* @media screen and (max-width: 400px) {} */

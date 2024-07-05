@@ -1,0 +1,72 @@
+.nav {
+  background: #007bff;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100vw;
+  height: auto;
+  margin: 0;
+  padding: 1em;
+  display: flex;
+  position: relative;
+}
+
+.profile {
+  display: flexbox;
+  text-align: center;
+  flex-flow: wrap;
+}
+
+.register {
+  flex-flow: wrap;
+  padding: auto .2em;
+  display: flex;
+}
+
+.register > a {
+  margin: auto .2em;
+  display: inline-block;
+}
+
+.register > a > button {
+  color: #0456c8;
+  cursor: pointer;
+  border: none;
+  border-radius: .4em;
+  outline: none;
+  margin: auto .3em;
+  padding: .4em .6em;
+  font-size: .9rem;
+  font-weight: bold;
+}
+
+#logo, .profile > img {
+  border-radius: 50%;
+  width: 3.5cqw;
+  min-width: 2em;
+  height: 3.5cqw;
+  min-height: 2em;
+}
+
+#logo {
+  margin: auto 1em auto .5em;
+}
+
+.profile > img {
+  vertical-align: middle;
+}
+
+.nav > input[type="search"] {
+  border: 1px solid #ccc;
+  border-radius: .5em;
+  outline: none;
+  width: 60%;
+  min-height: 40px;
+  margin: auto;
+  padding: .5em 1em;
+  box-shadow: 0 0 10px #4ba0f5;
+}
+
+.nav > input[type="search"]:hover {
+  box-shadow: 0 0 5px 2px #ccc;
+}
+/*# sourceMappingURL=index.06674c26.css.map */
