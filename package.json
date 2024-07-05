@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "homepage": "https://gitname.github.io/bandhu",
   "description": "Web interface for gemini_AI Chatbot",
-  "main": "index.js",
+  
   "type": "module",
   "scripts": {
     "start": "npx parcel ./public/index.html",
-    "build": "npx parcel build ./public/index.html",
+    "build": "parcel build ./public/index.html",
     "deploy":"gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
