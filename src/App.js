@@ -9,7 +9,7 @@ import Chatbot from "./components/chatbot";
 import ChatIcon from "./components/chatIcon";
 import Homepage from "./components/hompage";
 import Dashboard from "./components/dashboard";
-import { Authorization } from "../config/globalVariables";
+import { Authorization, UserInfo } from "../config/globalVariables";
 
 
 
@@ -18,9 +18,13 @@ const Page = () => {
     return (
         <>
             <Authorization>
-                <Nav ></Nav>
-                <Outlet />
-                {(location.pathname !== '/chatbot') ? (<ChatIcon />) : (<></>)}
+                <UserInfo>
+                    <div id="animationBody"  >
+                        <Nav ></Nav>
+                        <Outlet />
+                        {(location.pathname !== '/chatbot') ? (<ChatIcon />) : (<></>)}
+                    </div>
+                </UserInfo>
             </Authorization>
 
         </>

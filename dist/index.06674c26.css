@@ -1,19 +1,26 @@
 .nav {
-  background: #007bff;
+  z-index: 15;
+  background: none;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100vw;
   height: auto;
   margin: 0;
-  padding: 1em;
   display: flex;
   position: relative;
+  top: 0;
+}
+
+#title {
+  color: var(--font-color-1);
 }
 
 .profile {
   display: flexbox;
-  text-align: center;
   flex-flow: wrap;
+  height: fit-content;
+  margin: auto .01em;
+  position: relative;
 }
 
 .register {
@@ -27,8 +34,9 @@
   display: inline-block;
 }
 
-.register > a > button {
-  color: #0456c8;
+.register_button {
+  color: var(--bg-color-2);
+  background-color: var(--font-color-2);
   cursor: pointer;
   border: none;
   border-radius: .4em;
@@ -39,15 +47,18 @@
   font-weight: bold;
 }
 
-#logo, .profile > img {
+.register_button:hover {
+  background-color: var(--font-color-1);
+}
+
+#logo, .profile_img {
   border-radius: 50%;
-  width: 3.5cqw;
-  min-width: 2em;
-  height: 3.5cqw;
-  min-height: 2em;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 #logo {
+  vertical-align: text-top;
   margin: auto 1em auto .5em;
 }
 

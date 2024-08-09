@@ -18,7 +18,9 @@ const StartChat = async (userInput, chatHistory = []) => {
         });
 
         const result = await chat.sendMessage(userInput);
+        // console.log(result);
         const response = await result.response;
+        // console.log(response);
         const text = response.text();
 
         //updating history

@@ -27253,24 +27253,37 @@ const Page = ()=>{
     const location = (0, _reactRouterDom.useLocation)();
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _globalVariables.Authorization), {
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navDefault.default), {}, void 0, false, {
-                    fileName: "src/App.js",
-                    lineNumber: 21,
-                    columnNumber: 17
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _globalVariables.UserInfo), {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    id: "animationBody",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navDefault.default), {}, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 23,
+                            columnNumber: 25
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 24,
+                            columnNumber: 25
+                        }, undefined),
+                        location.pathname !== "/chatbot" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _chatIconDefault.default), {}, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 25,
+                            columnNumber: 64
+                        }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {}, void 0, false)
+                    ]
+                }, void 0, true, {
                     fileName: "src/App.js",
                     lineNumber: 22,
-                    columnNumber: 17
-                }, undefined),
-                location.pathname !== "/chatbot" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _chatIconDefault.default), {}, void 0, false, {
-                    fileName: "src/App.js",
-                    lineNumber: 23,
-                    columnNumber: 56
-                }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {}, void 0, false)
-            ]
-        }, void 0, true, {
+                    columnNumber: 21
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 21,
+                columnNumber: 17
+            }, undefined)
+        }, void 0, false, {
             fileName: "src/App.js",
             lineNumber: 20,
             columnNumber: 13
@@ -27288,7 +27301,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Page, {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 33,
+            lineNumber: 37,
             columnNumber: 18
         }, undefined),
         children: [
@@ -27296,7 +27309,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _hompageDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 37,
+                    lineNumber: 41,
                     columnNumber: 26
                 }, undefined)
             },
@@ -27304,7 +27317,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/login",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loginDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 41,
+                    lineNumber: 45,
                     columnNumber: 26
                 }, undefined)
             },
@@ -27312,7 +27325,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/signup",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _signupDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 45,
+                    lineNumber: 49,
                     columnNumber: 26
                 }, undefined)
             },
@@ -27320,7 +27333,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/chatbot",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _chatbotDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 49,
+                    lineNumber: 53,
                     columnNumber: 26
                 }, undefined)
             },
@@ -27328,14 +27341,14 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/dashboard",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dashboardDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 53,
+                    lineNumber: 57,
                     columnNumber: 26
                 }, undefined)
             }
         ],
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 56,
+            lineNumber: 60,
             columnNumber: 23
         }, undefined)
     }
@@ -34422,6 +34435,7 @@ const Login = ()=>{
     const [isVerified, setIsVerified] = (0, _globalVariablesJs.useVerify)();
     const [userName, setUserName] = (0, _react.useState)("");
     const [passWord, setPaasWord] = (0, _react.useState)("");
+    const [userInfo, setUserInfo] = (0, _globalVariablesJs.useUser)();
     const handleSubmit = async (e)=>{
         e.preventDefault();
         const error = document.getElementById("login_error");
@@ -34437,7 +34451,7 @@ const Login = ()=>{
                         password: passWord
                     })
                 });
-                // console.log(response);
+                console.log(response);
                 const result = await response.json();
                 //removing error message if any
                 error.innerText = "";
@@ -34449,6 +34463,7 @@ const Login = ()=>{
                     if (result.status === "SUCCESS") {
                         setUserName("");
                         setIsVerified(true);
+                        setUserInfo(result?.data);
                     } else error.innerText = result.message;
                 // console.log('response recieved', response.status, result);
                 } else // console.log("Error: ", response.status);
@@ -34463,7 +34478,7 @@ const Login = ()=>{
         to: "/dashboard"
     }, void 0, false, {
         fileName: "src/components/login.js",
-        lineNumber: 63,
+        lineNumber: 66,
         columnNumber: 28
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34473,7 +34488,7 @@ const Login = ()=>{
                     children: "Login"
                 }, void 0, false, {
                     fileName: "src/components/login.js",
-                    lineNumber: 66,
+                    lineNumber: 69,
                     columnNumber: 17
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
@@ -34487,7 +34502,7 @@ const Login = ()=>{
                             required: true
                         }, void 0, false, {
                             fileName: "src/components/login.js",
-                            lineNumber: 69,
+                            lineNumber: 72,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -34499,7 +34514,7 @@ const Login = ()=>{
                             required: true
                         }, void 0, false, {
                             fileName: "src/components/login.js",
-                            lineNumber: 70,
+                            lineNumber: 73,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -34508,13 +34523,13 @@ const Login = ()=>{
                             onClick: handleSubmit
                         }, void 0, false, {
                             fileName: "src/components/login.js",
-                            lineNumber: 71,
+                            lineNumber: 74,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/login.js",
-                    lineNumber: 67,
+                    lineNumber: 70,
                     columnNumber: 17
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34523,14 +34538,14 @@ const Login = ()=>{
                             id: "login_error"
                         }, void 0, false, {
                             fileName: "src/components/login.js",
-                            lineNumber: 74,
+                            lineNumber: 77,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                             children: "Have you Sign-Up!"
                         }, void 0, false, {
                             fileName: "src/components/login.js",
-                            lineNumber: 75,
+                            lineNumber: 78,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -34538,26 +34553,27 @@ const Login = ()=>{
                             children: "Signup"
                         }, void 0, false, {
                             fileName: "src/components/login.js",
-                            lineNumber: 77,
+                            lineNumber: 80,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/login.js",
-                    lineNumber: 73,
+                    lineNumber: 76,
                     columnNumber: 17
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/login.js",
-            lineNumber: 65,
+            lineNumber: 68,
             columnNumber: 13
         }, undefined)
     }, void 0, false);
 };
-_s(Login, "I7cSuAPg8DosR4rSuQXEYPRsgpE=", false, function() {
+_s(Login, "0rBsO1fn8QZC+DH597LYcaPvFgg=", false, function() {
     return [
-        (0, _globalVariablesJs.useVerify)
+        (0, _globalVariablesJs.useVerify),
+        (0, _globalVariablesJs.useUser)
     ];
 });
 _c = Login;
@@ -34582,15 +34598,17 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "chatHistory", ()=>chatHistory);
 parcelHelpers.export(exports, "Authorization", ()=>Authorization);
 parcelHelpers.export(exports, "useVerify", ()=>useVerify);
+parcelHelpers.export(exports, "UserInfo", ()=>UserInfo);
+parcelHelpers.export(exports, "useUser", ()=>useUser);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
-var _s = $RefreshSig$(), _s1 = $RefreshSig$();
+var _s = $RefreshSig$(), _s1 = $RefreshSig$(), _s2 = $RefreshSig$(), _s3 = $RefreshSig$();
 //create context
 const VerifyContext = /*#__PURE__*/ (0, _react.createContext)();
 //create a provider component
 const Authorization = ({ children })=>{
     _s();
-    const [isVerified, setIsVerified] = (0, _react.useState)(true);
+    const [isVerified, setIsVerified] = (0, _react.useState)(false);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(VerifyContext.Provider, {
         value: [
             isVerified,
@@ -34599,11 +34617,11 @@ const Authorization = ({ children })=>{
         children: children
     }, void 0, false, {
         fileName: "config/globalVariables.js",
-        lineNumber: 9,
+        lineNumber: 10,
         columnNumber: 9
     }, undefined);
 };
-_s(Authorization, "/ju4vj/Go3lnxT1H/N7rtO4r2uU=");
+_s(Authorization, "2C7pNd1FuWz8xViaqz/CMtUnXAE=");
 _c = Authorization;
 //custom hook to use the GlobalContext
 const useVerify = ()=>{
@@ -34612,8 +34630,35 @@ const useVerify = ()=>{
 };
 _s1(useVerify, "gDsCjeeItUuvgOWf1v4qoK9RF6k=");
 const chatHistory = [];
-var _c;
+//creating another context for user Information
+const UserInfoContext = /*#__PURE__*/ (0, _react.createContext)();
+const UserInfo = ({ children })=>{
+    _s2();
+    const [userInfo, setUserInfo] = (0, _react.useState)({
+        "name": "System"
+    });
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(UserInfoContext.Provider, {
+        value: [
+            userInfo,
+            setUserInfo
+        ],
+        children: children
+    }, void 0, false, {
+        fileName: "config/globalVariables.js",
+        lineNumber: 29,
+        columnNumber: 9
+    }, undefined);
+};
+_s2(UserInfo, "UWD/MN2VXb/IXDEEbdxjUJjsejs=");
+_c1 = UserInfo;
+const useUser = ()=>{
+    _s3();
+    return (0, _react.useContext)(UserInfoContext);
+};
+_s3(useUser, "gDsCjeeItUuvgOWf1v4qoK9RF6k=");
+var _c, _c1;
 $RefreshReg$(_c, "Authorization");
+$RefreshReg$(_c1, "UserInfo");
 
   $parcel$ReactRefreshHelpers$717f.postlude(module);
 } finally {
@@ -35010,8 +35055,8 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _1Jpg = require("../../public/static/img/1.jpg");
-var _1JpgDefault = parcelHelpers.interopDefault(_1Jpg);
+var _bandhuPng = require("../../public/static/img/bandhu.png");
+var _bandhuPngDefault = parcelHelpers.interopDefault(_bandhuPng);
 var _reactRouterDom = require("react-router-dom");
 var _profile = require("./profile");
 var _profileDefault = parcelHelpers.interopDefault(_profile);
@@ -35046,22 +35091,26 @@ const Nav = (props)=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "nav",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                id: "logo",
-                src: (0, _1JpgDefault.default)
-            }, void 0, false, {
-                fileName: "src/components/nav.js",
-                lineNumber: 48,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                id: "search",
-                type: "search",
-                name: "query",
-                placeholder: "Enter your query.....",
-                value: search,
-                onChange: (e)=>setSearch(e.target.value),
-                onKeyDown: handleSearchSubmit
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                to: "/",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    id: "title",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            id: "logo",
+                            src: (0, _bandhuPngDefault.default)
+                        }, void 0, false, {
+                            fileName: "src/components/nav.js",
+                            lineNumber: 50,
+                            columnNumber: 32
+                        }, undefined),
+                        "Bandhu"
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/nav.js",
+                    lineNumber: 50,
+                    columnNumber: 17
+                }, undefined)
             }, void 0, false, {
                 fileName: "src/components/nav.js",
                 lineNumber: 49,
@@ -35069,7 +35118,7 @@ const Nav = (props)=>{
             }, undefined),
             isVerified ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileDefault.default), {}, void 0, false, {
                 fileName: "src/components/nav.js",
-                lineNumber: 56,
+                lineNumber: 52,
                 columnNumber: 30
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "register",
@@ -35077,41 +35126,43 @@ const Nav = (props)=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: "/login",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            className: "register_button",
                             children: "Login"
                         }, void 0, false, {
                             fileName: "src/components/nav.js",
-                            lineNumber: 58,
+                            lineNumber: 54,
                             columnNumber: 39
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/nav.js",
-                        lineNumber: 58,
+                        lineNumber: 54,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: "/signup",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            className: "register_button",
                             children: "Signup"
                         }, void 0, false, {
                             fileName: "src/components/nav.js",
-                            lineNumber: 59,
+                            lineNumber: 55,
                             columnNumber: 40
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/nav.js",
-                        lineNumber: 59,
+                        lineNumber: 55,
                         columnNumber: 21
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/nav.js",
-                lineNumber: 57,
+                lineNumber: 53,
                 columnNumber: 17
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/nav.js",
-        lineNumber: 47,
+        lineNumber: 48,
         columnNumber: 9
     }, undefined);
 };
@@ -35130,10 +35181,10 @@ $RefreshReg$(_c, "Nav");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../public/static/img/1.jpg":"4Q62G","react-router-dom":"9xmpe","./profile":"5ILuw","../constants":"3huJa","../../config/globalVariables.js":"coWye","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4Q62G":[function(require,module,exports) {
-module.exports = require("8b07603a3b65abe9").getBundleURL("h7qW7") + "1.3a315a97.jpg" + "?" + Date.now();
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../public/static/img/bandhu.png":"hlMye","react-router-dom":"9xmpe","./profile":"5ILuw","../constants":"3huJa","../../config/globalVariables.js":"coWye","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hlMye":[function(require,module,exports) {
+module.exports = require("ebc9afcd5278fbb").getBundleURL("h7qW7") + "bandhu.9563b384.png" + "?" + Date.now();
 
-},{"8b07603a3b65abe9":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+},{"ebc9afcd5278fbb":"lgJ39"}],"lgJ39":[function(require,module,exports) {
 "use strict";
 var bundleURL = {};
 function getBundleURLCached(id) {
@@ -35191,8 +35242,8 @@ const Profile = (props)=>{
     const [isNew, setIsNew] = (0, _react.useState)(true);
     const location = (0, _reactRouterDom.useLocation)();
     const navigate = (0, _reactRouterDom.useNavigate)();
-    const handleChange = (e)=>{
-        navigate(e.target.value);
+    const handleClick = (e)=>{
+        navigate("/dashboard");
     };
     const options = [
         {
@@ -35212,7 +35263,12 @@ const Profile = (props)=>{
         className: "profile",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: (0, _2JpgDefault.default)
+                className: "profile_img",
+                src: (0, _2JpgDefault.default),
+                style: {
+                    cursor: "pointer"
+                },
+                onClick: handleClick
             }, void 0, false, {
                 fileName: "src/components/profile.js",
                 lineNumber: 29,
@@ -35220,7 +35276,7 @@ const Profile = (props)=>{
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropmenuDefault.default), {}, void 0, false, {
                 fileName: "src/components/profile.js",
-                lineNumber: 56,
+                lineNumber: 31,
                 columnNumber: 13
             }, undefined)
         ]
@@ -35267,6 +35323,7 @@ const DropMenu = ()=>{
     _s();
     const navigate = (0, _reactRouterDom.useNavigate)();
     const [isVerified, setIsVerified] = (0, _globalVariablesJs.useVerify)();
+    const [userInfo, setUserInfo] = (0, _globalVariablesJs.useUser)();
     const list = [
         {
             str: "Dashboard",
@@ -35313,7 +35370,7 @@ const DropMenu = ()=>{
                 children: "\u2B9B"
             }, void 0, false, {
                 fileName: "src/components/dropmenu.js",
-                lineNumber: 19,
+                lineNumber: 20,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35327,12 +35384,12 @@ const DropMenu = ()=>{
                             children: ele.str
                         }, void 0, false, {
                             fileName: "src/components/dropmenu.js",
-                            lineNumber: 49,
+                            lineNumber: 50,
                             columnNumber: 77
                         }, undefined)
                     }, 200 + idx, false, {
                         fileName: "src/components/dropmenu.js",
-                        lineNumber: 49,
+                        lineNumber: 50,
                         columnNumber: 37
                     }, undefined);
                     else return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35340,6 +35397,7 @@ const DropMenu = ()=>{
                         onClick: (e)=>{
                             // isVerified = false;
                             setIsVerified(false);
+                            setUserInfo({});
                             // console.log('logout');
                             // console.log(isVerified);
                             navigate("/");
@@ -35350,22 +35408,23 @@ const DropMenu = ()=>{
                         ]
                     }, 200 + idx, true, {
                         fileName: "src/components/dropmenu.js",
-                        lineNumber: 54,
+                        lineNumber: 55,
                         columnNumber: 33
                     }, undefined);
                 }) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {}, void 0, false)
             }, void 0, false, {
                 fileName: "src/components/dropmenu.js",
-                lineNumber: 45,
+                lineNumber: 46,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(DropMenu, "afDAVhhhJuTHQaSc8dVAh2RlMj4=", false, function() {
+_s(DropMenu, "Ibj8B6UqTEVY599/K2hA1v2a1D0=", false, function() {
     return [
         (0, _reactRouterDom.useNavigate),
-        (0, _globalVariablesJs.useVerify)
+        (0, _globalVariablesJs.useVerify),
+        (0, _globalVariablesJs.useUser)
     ];
 });
 _c = DropMenu;
@@ -74403,7 +74462,9 @@ const StartChat = async (userInput, chatHistory = [])=>{
             }
         });
         const result = await chat.sendMessage(userInput);
+        // console.log(result);
         const response = await result.response;
+        // console.log(response);
         const text = response.text();
         //updating history
         chatHistory.push([
@@ -75810,12 +75871,40 @@ const ChatIcon = ()=>{
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
             to: "/chatbot",
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                id: "chat",
+                id: "chatIcon",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                    children: "<\u24D8>"
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        height: "24",
+                        viewBox: "0 0 24 24",
+                        width: "24",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                d: "M0 0h24v24H0z",
+                                fill: "none"
+                            }, void 0, false, {
+                                fileName: "src/components/chatIcon.js",
+                                lineNumber: 14,
+                                columnNumber: 40
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                d: "M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z",
+                                stroke: "var(--chat-icon-color)",
+                                fill: "var(--chat-icon-color)"
+                            }, void 0, false, {
+                                fileName: "src/components/chatIcon.js",
+                                lineNumber: 16,
+                                columnNumber: 29
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/chatIcon.js",
+                        lineNumber: 12,
+                        columnNumber: 25
+                    }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/chatIcon.js",
-                    lineNumber: 10,
+                    lineNumber: 11,
                     columnNumber: 21
                 }, undefined)
             }, void 0, false, {
@@ -75852,6 +75941,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactRouterDom = require("react-router-dom");
+var _typeAnimation = require("../../config/typeAnimation");
 var _s = $RefreshSig$();
 window.onload = ()=>{
     localStorage.setItem("newAPIKey", "");
@@ -75860,6 +75950,13 @@ const Homepage = ()=>{
     _s();
     const navigate = (0, _reactRouterDom.useNavigate)();
     const [key, setKey] = (0, _react.useState)("");
+    (0, _react.useEffect)(()=>{
+        const heading = document.getElementById("welcome");
+        // const apiBox = document.getElementsByClassName('haveApi')[0];
+        const apiBox = document.getElementById("apiBox");
+        (0, _typeAnimation.typeAnimation)("Welcome!", 100, heading);
+        apiBox.style.display = "flex";
+    }, []);
     const handleSubmit = (e)=>{
         e.preventDefault();
         if (key !== "") {
@@ -75870,112 +75967,106 @@ const Homepage = ()=>{
         } else window.alert("Please enter valid key!");
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            id: "animationBody",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                    id: "welcome",
-                    children: "Welcome!"
-                }, void 0, false, {
-                    fileName: "src/components/hompage.js",
-                    lineNumber: 29,
-                    columnNumber: 17
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "haveApi",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                            className: "keyButton",
-                            onClick: (e)=>{
-                                const keyContainer = document.getElementById("keyInputContainer");
-                                keyContainer.style.display = "flex";
-                            },
-                            children: "I have a gemini-ai API key?"
-                        }, void 0, false, {
-                            fileName: "src/components/hompage.js",
-                            lineNumber: 31,
-                            columnNumber: 21
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            id: "keyInputContainer",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                    type: "text",
-                                    id: "keyInput",
-                                    placeholder: "Enter API key.....",
-                                    value: key,
-                                    onChange: (e)=>{
-                                        setKey(e.target.value);
-                                    },
-                                    onSubmit: handleSubmit,
-                                    onKeyDown: (e)=>{
-                                        if (e.key == "Enter") handleSubmit(e);
-                                    }
-                                }, void 0, false, {
-                                    fileName: "src/components/hompage.js",
-                                    lineNumber: 39,
-                                    columnNumber: 25
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                    id: "markOk",
-                                    title: "Submit",
-                                    onClick: handleSubmit,
-                                    children: "\u2714"
-                                }, void 0, false, {
-                                    fileName: "src/components/hompage.js",
-                                    lineNumber: 49,
-                                    columnNumber: 25
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/hompage.js",
-                            lineNumber: 38,
-                            columnNumber: 21
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                            className: "keyButton",
-                            onClick: (e)=>{
-                                navigate("/login");
-                            },
-                            children: "Don't have an key!"
-                        }, void 0, false, {
-                            fileName: "src/components/hompage.js",
-                            lineNumber: 53,
-                            columnNumber: 21
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/hompage.js",
-                    lineNumber: 30,
-                    columnNumber: 17
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "animated2"
-                }, void 0, false, {
-                    fileName: "src/components/hompage.js",
-                    lineNumber: 59,
-                    columnNumber: 17
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "animated2 ",
-                    style: {
-                        animationDuration: "20s",
-                        translate: "transformY(50%)"
-                    }
-                }, void 0, false, {
-                    fileName: "src/components/hompage.js",
-                    lineNumber: 60,
-                    columnNumber: 17
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/hompage.js",
-            lineNumber: 28,
-            columnNumber: 13
-        }, undefined)
-    }, void 0, false);
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                id: "welcome",
+                className: "main_heading"
+            }, void 0, false, {
+                fileName: "src/components/hompage.js",
+                lineNumber: 39,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                id: "apiBox",
+                className: "haveApi",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "keyButton",
+                        onClick: (e)=>{
+                            const keyContainer = document.getElementById("keyInputContainer");
+                            keyContainer.style.display = "flex";
+                        },
+                        children: "I have a gemini-ai API key?"
+                    }, void 0, false, {
+                        fileName: "src/components/hompage.js",
+                        lineNumber: 41,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        id: "keyInputContainer",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                type: "text",
+                                id: "keyInput",
+                                placeholder: "Enter API key.....",
+                                value: key,
+                                onChange: (e)=>{
+                                    setKey(e.target.value);
+                                },
+                                onSubmit: handleSubmit,
+                                onKeyDown: (e)=>{
+                                    if (e.key == "Enter") handleSubmit(e);
+                                }
+                            }, void 0, false, {
+                                fileName: "src/components/hompage.js",
+                                lineNumber: 49,
+                                columnNumber: 21
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                id: "markOk",
+                                title: "Submit",
+                                onClick: handleSubmit,
+                                children: "\u2714"
+                            }, void 0, false, {
+                                fileName: "src/components/hompage.js",
+                                lineNumber: 59,
+                                columnNumber: 21
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/hompage.js",
+                        lineNumber: 48,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "keyButton",
+                        onClick: (e)=>{
+                            navigate("/login");
+                        },
+                        children: "Don't have an key!"
+                    }, void 0, false, {
+                        fileName: "src/components/hompage.js",
+                        lineNumber: 63,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/hompage.js",
+                lineNumber: 40,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "animated2"
+            }, void 0, false, {
+                fileName: "src/components/hompage.js",
+                lineNumber: 69,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "animated2 ",
+                style: {
+                    animationDuration: "20s",
+                    translate: "transformY(50%)"
+                }
+            }, void 0, false, {
+                fileName: "src/components/hompage.js",
+                lineNumber: 70,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true);
 };
-_s(Homepage, "pvaCGsZH+C2M3LsrDn4e1ClLOZo=", false, function() {
+_s(Homepage, "OgowHhE8STbEFFKR0DRU6QZ3NnI=", false, function() {
     return [
         (0, _reactRouterDom.useNavigate)
     ];
@@ -75990,7 +76081,22 @@ $RefreshReg$(_c, "Homepage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1zV2n":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../../config/typeAnimation":"7Y3fY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7Y3fY":[function(require,module,exports) {
+//type animation
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "typeAnimation", ()=>typeAnimation);
+const typeAnimation = (str, time, element)=>{
+    // const element = document.getElementById(`${id}`);
+    let i = 0;
+    const interval = setInterval(()=>{
+        element.innerHTML += str[i];
+        i++;
+        if (i >= str.length) clearInterval(interval);
+    }, time);
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1zV2n":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0c2b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -76006,23 +76112,30 @@ var _s = $RefreshSig$();
 const Dashboard = ()=>{
     _s();
     const [isVerified, setIsVerified] = (0, _globalVariablesJs.useVerify)();
-    return isVerified ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-        children: "Dashboard"
-    }, void 0, false, {
-        fileName: "src/components/dashboard.js",
-        lineNumber: 6,
-        columnNumber: 25
-    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Navigate), {
+    const [userInfo, setUserInfo] = (0, _globalVariablesJs.useUser)();
+    return !isVerified ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Navigate), {
         to: "/login"
     }, void 0, false, {
         fileName: "src/components/dashboard.js",
-        lineNumber: 6,
-        columnNumber: 46
+        lineNumber: 8,
+        columnNumber: 28
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+        className: "main_heading",
+        children: [
+            "Welcome ",
+            userInfo?.name,
+            "! "
+        ]
+    }, void 0, true, {
+        fileName: "src/components/dashboard.js",
+        lineNumber: 10,
+        columnNumber: 13
     }, undefined);
 };
-_s(Dashboard, "SDjNkr5jAJFmDwMd8fcO+RYs22M=", false, function() {
+_s(Dashboard, "RSxuepCk1FbyKzobmAgUgIgMiVs=", false, function() {
     return [
-        (0, _globalVariablesJs.useVerify)
+        (0, _globalVariablesJs.useVerify),
+        (0, _globalVariablesJs.useUser)
     ];
 });
 _c = Dashboard;

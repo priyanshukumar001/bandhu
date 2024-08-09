@@ -11,8 +11,8 @@ const Profile = (props) => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    const handleChange = (e) => {
-        navigate(e.target.value)
+    const handleClick = (e) => {
+        navigate('/dashboard');
     }
 
     const options = [
@@ -26,32 +26,7 @@ const Profile = (props) => {
     // }, [location]);
     return (
         <div className='profile'>
-            <img src={img2} />
-            {/* 
-            <Link to={isNew ? '/login' : '/signup'} >
-                <button
-                    onClick={
-                        (e) => {
-                            if (isNew) setIsNew(false);
-                            else setIsNew(true);
-                        }
-                    }
-                >{isNew ? ('Login') : ('Signin')}</button>
-            </Link>
-            {(location.pathname === '/dashboard') ? (<Link to='/'><button>Logout</button></Link>) : (<></>)} */}
-
-            {/* {(location.pathname === '/' || location.pathname === '/signup' || location.pathname === '/login') ? (
-                <>
-                    <select onChange={handleChange} >
-                        <option value="/login">Login</option>
-                        <option value="/signup">Signup</option>
-                    </select>
-                </>
-            ) : (
-                <>
-                    <Link to='/' onClick={() => chatHistory.splice(0, chatHistory.length)}><button>Logout</button></Link>
-                </>
-            )} */}
+            <img className='profile_img' src={img2} style={{ cursor: "pointer" }} onClick={handleClick} />
 
             <DropMenu></DropMenu>
         </div>

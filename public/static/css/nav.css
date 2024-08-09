@@ -2,24 +2,34 @@
     width: 100vw;
     height: auto;
     /* max-height: ; */
-    padding: 1em;
-    background: rgb(0, 123, 255);
-    /* background: linear-gradient(90deg, transparent); */
+    /* padding: 1em; */
+    background: transparent;
     display: flex;
     flex-wrap: wrap;
     /* flex-direction: row; */
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: 0;
     position: relative;
+    top: 0;
+    z-index: 15;
+    /* border: 1px solid white; */
 
 }
 
+#title {
+    /* color: aliceblue; prev */
+    color: var(--font-color-1);
+    /* border: 1px solid white; */
+}
+
 .profile {
+    height: fit-content;
+    margin: auto 0.01em;
     display: flexbox;
     flex-wrap: wrap;
     flex-direction: row;
-    text-align: center;
-    /* border: 1px solid black; */
+    position: relative;
+    /* border: 1px solid white; */
 }
 
 .register {
@@ -34,14 +44,16 @@
 
 .register > a {
     display: inline-block;
-    /* border: 1px solid black; */
     margin: auto 0.2em;
 
 }
 
-.register > a > button {
+.register_button {
     font-size: 0.9rem;
-    color: rgb(4, 86, 200);
+    /* color: rgb(4, 86, 200); prev */
+    color: var(--bg-color-2);
+    background-color: var(--font-color-2);
+
     font-weight: bold;
     padding: 0.4em 0.6em;
     border-radius: 0.4em;
@@ -52,21 +64,21 @@
     /* border: 1px solid black; */
 }
 
+.register_button:hover {
+    background-color: var(--font-color-1);
+}
+
 #logo,
-.profile > img {
-    width: 3.5cqw;
-    height: 3.5cqw;
-    min-height: 2em;
-    min-width: 2em;
+.profile_img {
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
-    /* margin: auto 1em; */
-    /* justify-self: center; */
-    /* vertical-align: middle; */
-    /* display: block; */
 }
 
 #logo {
     margin: auto 1em auto 0.5em;
+    /* margin: auto; */
+    vertical-align: text-top;
 }
 
 .profile > img {
@@ -92,20 +104,3 @@
 .nav > input[type='search']:hover {
     box-shadow: 0 0 5px 2px #ccc;
 }
-
-/* .profile > select,
-.profile > a > button {
-
-    padding: 0.4em 0.6em;
-    border-radius: 0.4em;
-    border: none;
-    margin: auto 0.2em;
-    outline: none;
-    font-size: 1rem;
-} */
-
-
-
-/* option:active {
-    background-color: #edf54b;
-} */
