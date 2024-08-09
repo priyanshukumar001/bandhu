@@ -1,26 +1,17 @@
-/* body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-} */
-
 .chat-container {
     width: 80%;
     height: 82vh;
     max-width: 800px;
-    background: #fff;
+    /* background: #fff; */
+    background: var(--bg-color-1);
     border: 1px solid #ccc;
-    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 0 10px 10px rgba(139, 240, 249, 0.215); */
+    box-shadow: 0 0 10px 5px var(--shadows);
     border: none;
     border-radius: 0.4em;
-    margin: 2em auto;
+    margin: 1.4rem auto;
     position: relative;
-    /* border: 5px solid black; */
+    /* border: 5px solid white; */
 
 }
 
@@ -159,9 +150,9 @@ code {
     /* border: 1px solid black; */
 }
 
-.input-container:hover {
-    box-shadow: 0px -1em 1em 1em #fff;
-}
+/* .input-container:hover {
+    box-shadow: 0px -2em 0.8em 0.08em var(--highlights-2);
+} */
 
 
 .user-input-area {
@@ -176,6 +167,7 @@ code {
     /* margin: 0 auto; */
     border-top: 1px solid #ddd;
     background-color: #f9f9f9;
+    /* background-color: var(--bg-color-1); */
     min-height: 10vh;
     height: auto;
     /* border: 1px solid black; */
@@ -193,6 +185,7 @@ code {
     margin-bottom: 0.4em;
     /* font-size: 16px; */
     border: 1px solid #ccc;
+    background-color: var(--bg-color-1);
     border-radius: 5px;
     resize: none;
     /* Disable manual resizing */
@@ -200,13 +193,15 @@ code {
     scrollbar-width: none;
     outline: none;
     /* Hide the scrollbar */
+    color: var(--highlights-2);
     font-size: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #user-input:hover,
 #user-input:active {
-    box-shadow: 0px 0px 1em #ddd;
+    box-shadow: 0px 0px 1em var(--shadows);
+    /* box-shadow: 0px 0px 1em #ddd; */
 }
 
 /* #user-input {
@@ -226,8 +221,9 @@ code {
     display: inline-block;
     padding: .5em 1em;
     border: none;
-    background-color: #007BFF;
-    color: white;
+    /* background-color: #007BFF; */
+    background-color: var(--bg-color-1);
+    color: var(--highlights-2);
     border-radius: 5px;
     /* margin: 0px; */
 }

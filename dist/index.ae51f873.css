@@ -1,13 +1,13 @@
 .chat-container {
-  background: #fff;
+  background: var(--bg-color-1);
+  box-shadow: 0 0 10px 5px var(--shadows);
   border: none;
   border-radius: .4em;
   width: 80%;
   max-width: 800px;
   height: 82vh;
-  margin: 2em auto;
+  margin: 1.4rem auto;
   position: relative;
-  box-shadow: 0 0 10px 10px #0000001a;
 }
 
 #chat-box {
@@ -101,10 +101,6 @@ code {
   bottom: 0;
 }
 
-.input-container:hover {
-  box-shadow: 0 -1em 1em 1em #fff;
-}
-
 .user-input-area {
   background-color: #f9f9f9;
   border-top: 1px solid #ddd;
@@ -118,8 +114,10 @@ code {
 }
 
 #user-input {
+  background-color: var(--bg-color-1);
   resize: none;
   scrollbar-width: none;
+  color: var(--highlights-2);
   border: 1px solid #ccc;
   border-radius: 5px;
   outline: none;
@@ -134,12 +132,12 @@ code {
 }
 
 #user-input:hover, #user-input:active {
-  box-shadow: 0 0 1em #ddd;
+  box-shadow: 0px 0px 1em var(--shadows);
 }
 
 #send-button {
-  color: #fff;
-  background-color: #007bff;
+  background-color: var(--bg-color-1);
+  color: var(--highlights-2);
   border: none;
   border-radius: 5px;
   width: 100%;

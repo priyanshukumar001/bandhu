@@ -2,6 +2,18 @@
     box-sizing: border-box;
 }
 
+
+:root {
+    --font-color-1: #66fcf1;
+    --font-color-2: #45a29e;
+    --bg-color-1: #1f2833;
+    --bg-color-2: #0b0c10;
+    --highlights: #c5c6c7;
+    --highlights-2: #eff3f6;
+    --chat-icon-color: #215855;
+    --shadows: #428a86;
+}
+
 body {
     margin: 0px;
     width: 100vw;
@@ -12,7 +24,7 @@ h2 {
     text-align: center;
 }
 
-#chat {
+#chatIcon {
     width: 50px;
     height: 50px;
     /* padding: 0.1rem; */
@@ -20,16 +32,19 @@ h2 {
     text-align: center;
     vertical-align: middle;
     font-weight: bold;
-    background-color: rgb(18, 116, 255);
+
+    /* background-color: rgb(18, 116, 255); */
+    background-color: var(--highlights);
     display: flex;
     position: fixed;
     right: 2em;
     bottom: 2em;
 }
 
-#chat > p {
+#chatIcon > p {
     margin: auto;
     color: white;
+    line-height: 0.7em;
 }
 
 #login_error,
@@ -40,69 +55,73 @@ h2 {
 }
 
 a {
-    color: rgb(13, 110, 245);
+    color: var(--font-color-1);
     text-decoration: none;
 }
 
 /*for medium size screen*/
 @media screen and (max-width:650px) {
-    .chat-container {
+    /* .chat-container {
         width: 90%;
         margin: 1em auto;
         height: 80vh;
-    }
+    } */
 
-    #search {
+    /* #search {
         display: block;
         width: 70%;
         margin: 0.2em auto;
         padding: 0.2em 0.5em;
-        /* height: 1em; */
         font-size: 0.8em;
-    }
+    } */
 
+    #title {
+        margin: 0.2em auto;
+    }
 
     .profile {
         margin: 0.5em 0em 0em auto;
-        /* border: 1px solid black; */
-        /* margin-bottom: 0px; */
     }
 }
 
 /*for small size screen*/
 @media screen and (max-width: 400px) {
-    .container {
-        padding: 0.5em;
-        padding-top: 0;
-    }
-
-    .chat-container {
-        width: 100%;
-        /* min-width: none; */
-        margin: 0.5em auto;
-        height: 78vh;
-
-    }
-
-    .bot-message {
-        border-radius: 1em;
-    }
 
     .register {
         margin: 0.1rem auto;
         margin-bottom: 0;
     }
 
-    #logo {
-        margin: auto;
-        /* float: left; */
-        position: absolute;
-        bottom: 2cqh;
+    .nav {
+        display: block;
+        flex-wrap: nowrap;
+        flex-direction: unset;
+        /* padding: 0px; */
+        /* margin: 0; */
     }
 
-    #search {
+    #title {
+        display: inline-block;
         width: 100%;
+        text-align: center;
+        padding: auto;
+        margin: 0;
+        /* border: 1px solid black; */
     }
+
+    .profile {
+        display: inline-block;
+        width: fit-content;
+        margin: 0;
+        padding: 0%;
+    }
+
+    /* #logo {
+        margin: 0px;
+        border: 1px solid white;
+    } */
+
+
 
 }
 

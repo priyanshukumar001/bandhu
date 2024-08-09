@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 // import { isVerified } from '../../config/globalVariables';
-import { useVerify } from '../../config/globalVariables.js';
+import { useVerify, useUser } from '../../config/globalVariables.js';
 import { Url } from '../constants';
 const Login = () => {
     const [isVerified, setIsVerified] = useVerify();
     const [userName, setUserName] = useState('');
     const [passWord, setPaasWord] = useState('');
+    const [userInfo, setUserInfo] = useUser();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -23,7 +24,7 @@ const Login = () => {
                         body: JSON.stringify({ email: userName, password: passWord })
                     })
 
-                    // console.log(response);
+                    console.log(response);
                     const result = await response.json();
                     //removing error message if any
 
@@ -38,6 +39,8 @@ const Login = () => {
                         if (result.status === "SUCCESS") {
                             setUserName('');
                             setIsVerified(true);
+                            setUserInfo(result?.data);
+
                         }
                         else { error.innerText = result.message }
                         // console.log('response recieved', response.status, result);

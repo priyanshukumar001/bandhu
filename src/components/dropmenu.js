@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
-import { useVerify } from "../../config/globalVariables.js";
+import { useVerify, useUser } from "../../config/globalVariables.js";
 
 
 const DropMenu = () => {
     const navigate = useNavigate();
     const [isVerified, setIsVerified] = useVerify();
+    const [userInfo, setUserInfo] = useUser();
     const list = [
         { str: 'Dashboard', nav: '/dashboard' },
         { str: 'ChatBot', nav: '/chatbot' },
@@ -55,18 +56,14 @@ const DropMenu = () => {
                                     onClick={(e) => {
                                         // isVerified = false;
                                         setIsVerified(false);
+                                        setUserInfo({});
                                         // console.log('logout');
                                         // console.log(isVerified);
                                         navigate('/');
                                     }}
                                     key={200 + idx}
-                                // style={{ color: "rgb(13, 110, 245)", fontStyle: "bold", fontSize: "larger" }}
                                 > {ele.str}</div>
                             )
-
-
-
-
                         }
 
                     }))

@@ -1,5 +1,5 @@
 import React from 'react';
-import img1 from '../../public/static/img/1.jpg';
+import bandhu from '../../public/static/img/bandhu.png';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Profile from './profile';
@@ -42,21 +42,17 @@ const Nav = (props) => {
             }
         }
     }
+
     return (
 
         <div className='nav'>
-            <img id='logo' src={img1} />
-            <input id="search" type='search' name='query' placeholder='Enter your query.....'
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                onKeyDown={handleSearchSubmit}
-            />
-            {/* <p>{search}</p> */}
-            {/* <Profile chatHistory={chatHistory} />    */}
+            <Link to="/">
+                <h1 id='title'><img id='logo' src={bandhu} />Bandhu</h1>
+            </Link>
             {(isVerified) ? (<Profile />) : (
                 <div className='register'>
-                    <Link to='/login'><button>Login</button></Link>
-                    <Link to='/signup'><button>Signup</button></Link>
+                    <Link to='/login'><button className='register_button'>Login</button></Link>
+                    <Link to='/signup'><button className='register_button'>Signup</button></Link>
                 </div>
             )}
 

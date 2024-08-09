@@ -1,7 +1,8 @@
 .dropButton {
+  background-color: var(--font-color-2);
   text-align: center;
   vertical-align: middle;
-  background-color: #eee;
+  cursor: pointer;
   border-radius: 50%;
   width: 1em;
   height: 1em;
@@ -17,21 +18,22 @@
 }
 
 .dropBox {
+  background-color: var(--bg-color-2);
   z-index: 11;
   text-align: center;
-  background-color: #eee;
   border-radius: .5em;
-  flex-flow: wrap;
   width: fit-content;
+  margin-top: .2em;
   transition: width .5s ease-in-out, padding 1s cubic-bezier(.075, .82, .265, 1);
   position: absolute;
   right: 1em;
 }
 
 .dropOptions {
+  background-color: var(--bg-color-1);
   text-align: center;
-  color: #0d6ef5;
-  background-color: #fff;
+  color: var(--font-color-2);
+  cursor: pointer;
   border-bottom: 1px solid #a5a4a4;
   width: 100%;
   padding: .5em;
@@ -41,7 +43,7 @@
 }
 
 .dropOptions:hover {
-  background-color: #cae4fb;
+  background-color: #caeafb;
   box-shadow: 0 0 5px #fff;
 }
 /*# sourceMappingURL=index.3507a778.css.map */

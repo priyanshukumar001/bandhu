@@ -5,6 +5,7 @@ const VerifyContext = createContext();
 //create a provider component
 const Authorization = ({ children }) => {
     const [isVerified, setIsVerified] = useState(false);
+
     return (
         <VerifyContext.Provider value={[isVerified, setIsVerified]}>
             {children}
@@ -17,7 +18,26 @@ const useVerify = () => useContext(VerifyContext);
 
 const chatHistory = [];
 
-export { chatHistory, Authorization, useVerify }
+//creating another context for user Information
+
+const UserInfoContext = createContext();
+
+const UserInfo = ({ children }) => {
+    const [userInfo, setUserInfo] = useState({ "name": "System" });
+
+    return (
+        <UserInfoContext.Provider value={[userInfo, setUserInfo]} >
+            {children}
+        </UserInfoContext.Provider>
+    )
+}
+
+const useUser = () => useContext(UserInfoContext);
+
+
+
+
+export { chatHistory, Authorization, useVerify, UserInfo, useUser }
 
 
 

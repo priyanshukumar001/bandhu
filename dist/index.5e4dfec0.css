@@ -1,10 +1,21 @@
+:root {
+  --animation-body-left: var(--bg-color-2);
+  --animation-body-right: #29323c;
+  --moving-animation-left: #1b3647;
+  --moving-animation-right: #354961;
+  --highlights: #c5c6c7;
+  --moving-highlights: #fff8;
+  --key-gradient-left: #07858ccc;
+  --key-gradient-right: #071f24cc;
+}
+
 #animationBody {
+  background: linear-gradient(to right, var(--animation-body-left), var(--animation-body-right));
   z-index: 0;
-  background: linear-gradient(to right, #08b3fd, #0315bf);
   width: 100vw;
   min-height: 100vh;
   margin: 0;
-  padding: 1em;
+  padding: 0;
   transition: transform 1s linear;
   position: relative;
   overflow: hidden;
@@ -12,9 +23,9 @@
 
 .animated2 {
   z-index: -1;
+  background: radial-gradient(ellipse at top, var(--moving-animation-left), var(--moving-animation-right) 110%);
   opacity: .5;
   filter: blur(4rem);
-  background: radial-gradient(at top, #6fcafe, #17bbf7 110%);
   border-radius: 80%;
   width: 100em;
   height: 100em;
@@ -46,25 +57,27 @@
   }
 }
 
-#welcome {
+.main_heading {
   text-align: center;
+  color: var(--highlights);
+  margin-top: 15vh;
   font-family: Great Vibes, cursive;
   font-size: 4em;
   font-style: normal;
 }
 
 .haveApi {
-  display: flexbox;
   text-align: center;
   flex-flow: column wrap;
   width: fit-content;
   margin: 2em auto;
+  display: none;
 }
 
 .keyButton {
   cursor: pointer;
-  color: #f5f5f5;
-  background: linear-gradient(to right, #2092fc80, #031de3cc);
+  color: #fff;
+  background: linear-gradient(to right, var(--key-gradient-left), var(--key-gradient-right));
   border-radius: 1em;
   width: 100%;
   margin: 1em auto;
@@ -78,7 +91,7 @@
 
 .keyButton:before {
   content: "";
-  background: linear-gradient(90deg, #0000, #ffffff80, #0000);
+  background: linear-gradient(90deg, transparent, var(--moving-highlights), transparent 60%);
   border: none;
   width: 200%;
   height: 100%;
