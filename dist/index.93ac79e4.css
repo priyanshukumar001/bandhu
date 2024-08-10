@@ -55,6 +55,10 @@ a {
 }
 
 @media screen and (width <= 650px) {
+  .nav {
+    padding: 1em;
+  }
+
   #title {
     margin: .2em auto;
   }
@@ -64,15 +68,9 @@ a {
   }
 }
 
-@media screen and (width <= 400px) {
+@media screen and (width <= 380px) {
   .register {
-    margin: .1rem auto 0;
-  }
-
-  .nav {
-    flex-wrap: nowrap;
-    flex-direction: unset;
-    display: block;
+    margin: .5rem auto 0;
   }
 
   #title {
