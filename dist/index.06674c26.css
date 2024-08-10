@@ -1,6 +1,7 @@
 .nav {
   z-index: 15;
   background: none;
+  border: 1px solid #fff;
   flex-wrap: wrap;
   justify-content: space-evenly;
   width: 100vw;
